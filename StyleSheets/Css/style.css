@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-duration: 500ms;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #FFF;
+  color: #222;
+}
+
+/* Container */
+.container {
+  padding: 0.7rem;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+#logo {
+     width: 7rem;
+     height: 1rem;
+     background: url("../../Assets/Images/logo.svg") no-repeat center;
+     background-size: contain;
+     margin-right: 1rem;
+}
+
+#status {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: gray;
+}
+
+#status::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: limegreen;
+  border-radius: 50%;
+}
+
+#menu {
+     width: 100%;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+}
+
+/* İçerik Bölümü */
+.contentSection {
+  width: 100%;
+  background-color: #f4f5fa;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Profil */
+#circularAvatar {
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+  background: url('https://i.pinimg.com/736x/25/33/8f/25338f488af2c45912c15ebab325e363.jpg') no-repeat center center / cover;;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contentHeader .column {
+  display: flex;
+  flex-direction: column;
+}
+
+#name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#job {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Başlık ve açıklama */
+.bigTitle {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#aboutMySelf {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Görsel Kart */
+.profileImage {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.imageCaption {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: right;
+}
+
+/* Awards */
+.contentSection h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contentSection p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contentSection {
+    padding: 1.5rem;
+  }
+
+  .contentHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #circularAvatar {
+    margin-bottom: 1rem;
+  }
+}
