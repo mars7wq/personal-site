@@ -5,6 +5,11 @@
   box-sizing: border-box;
   transition-duration: 500ms;
   -webkit-tap-highlight-color: transparent; /* veya rgba(0,0,0,0) */
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;    
 }
 
 body {
@@ -67,12 +72,7 @@ body {
   color: #666;
   cursor: pointer;
   display: flex;
-  justify-content: end;
-
-   -webkit-user-select: none; 
-  -moz-user-select: none;    
-  -ms-user-select: none;     
-  user-select: none;        
+  justify-content: end;    
 }
 
 /* İçerik Bölümü */
