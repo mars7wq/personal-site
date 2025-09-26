@@ -68,6 +68,11 @@ body {
   cursor: pointer;
   display: flex;
   justify-content: end;
+
+   -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;        
 }
 
 /* İçerik Bölümü */
