@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   transition-duration: 500ms;
+  -webkit-tap-highlight-color: transparent; /* veya rgba(0,0,0,0) */
 }
 
 body {
