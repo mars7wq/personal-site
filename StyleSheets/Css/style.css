@@ -7,9 +7,14 @@
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Nunito', Arial, sans-serif;
   background: #FFF;
   color: #222;
+}
+
+:root{
+     --lightcard: #f4f5fa;
+     --darkcarad: #0d0d0d;
 }
 
 /* Container */
@@ -69,14 +74,14 @@ body {
   width: 100%;
   background-color: #f4f5fa;
   padding: 2rem;
-  border-radius: 1.2rem;
-  margin-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 0.7rem;
 }
 
 /* Profil */
 #circularAvatar {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: #000;
   background: url('https://i.pinimg.com/736x/25/33/8f/25338f488af2c45912c15ebab325e363.jpg') no-repeat center center / cover;;
   border-radius: 50%;
@@ -109,7 +114,7 @@ body {
 /* Başlık ve açıklama */
 .bigTitle {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
@@ -117,6 +122,7 @@ body {
   color: #555;
   line-height: 1.6;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 /* Görsel Kart */
@@ -130,7 +136,15 @@ body {
 .imageCaption {
   font-size: 0.85rem;
   color: #555;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.imageCaption svg{
+     float: left;
+     margin-left: 10px;
 }
 
 /* Awards */
@@ -145,6 +159,68 @@ body {
   color: #555;
 }
 
+ details {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 0.6rem;
+    background: var(--lightcard);
+    border: none;
+  }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* ok simgesi */
+  summary::-webkit-details-marker { display: none; } /* chrome */
+  .chev {
+    transition: transform .25s ease;
+  }
+  details[open] .chev { transform: rotate(90deg); }
+
+  /* içeriğe yumuşak açılma (basit) */
+  .faq-body {
+    padding: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+    animation: fadeIn .18s ease;
+  }
+   @keyframes fadeIn { from {opacity:0; transform: translateY(-4px)} to {opacity:1; transform:translateY(0)} }
+
+
+.footer{
+     width: 100%;
+     background-color: var(--darkcarad);
+      padding: 2rem;
+     border-radius: 0.8rem;
+     margin-bottom: 0.7rem;
+     color: white;
+     display: flex;
+     justify-content: space-around;
+}
+
+.linkSection{
+     display: flex;
+}
+
+.linkSection h4{
+     font-size: 1rem;
+     margin-bottom: 1rem;
+     text-align: center;
+}
+
+.linkSection a{
+     color: grey;
+     text-decoration: none;
+     text-align: center;
+     margin-bottom: 0.5rem;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .contentSection {
@@ -152,11 +228,43 @@ body {
   }
 
   .contentHeader {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
   #circularAvatar {
     margin-bottom: 1rem;
   }
+
+  .webpricing{
+     display: flex;
+     flex-direction: column;
+  }
+
+  .webpricing .startnow{
+     width: 100%;
+     background-color: #000;
+     color: white;
+     border-radius: 0.8rem;
+     border: none;
+     padding: 0.8rem 0rem;
+     font-weight: 400;
+     margin-top: 2.5rem;
+  }
+
+  summary { padding: 0.75rem; font-size: 1rem; }
+
+
+  .footer{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .linkSection{
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 1.5rem;
 }
+}
+
