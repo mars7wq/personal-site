@@ -54,6 +54,12 @@
      </script>
 
 
+
+
+
+
+
+
   <link rel="stylesheet" href="StyleSheets/Css/style.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -65,19 +71,20 @@
   <div class="container">
 
      <!--Menü-->
-     <div class="parent">
-          <div class="menucontainer">
+     <div class="parent" id="menuSection">
+          <div class="menucontainer" id="menubox">
           
-          <a href="">Ana sayfa</a>
-          <a href="">Hakkında</a>
-          <a href="">İletişim</a>
-          <a href="">Blog</a>
+          <a href="/" data-link>Ana sayfa</a>
+          <a href="Views/Pages/about/about.html" data-link>Hakkında</a>
+          <a href="/iletisim" data-link>İletişim</a>
+          <a href="/blog" data-link>Blog</a>
+
             
      </div>
      </div>
     
     <!-- Üst Bar -->
-    <div class="header">
+    <div class="header" id="head">
       <div id="logo">
 
       </div>
@@ -261,7 +268,9 @@
      </div>
     </div>
 
+
+    
   </div>
 </body>
-
+<script src="JavaScript/app.js"></script>
 </html>
